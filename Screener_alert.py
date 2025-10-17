@@ -30,9 +30,9 @@ ALL_STOCKS = sorted(list(set(DAFTAR_IDX80)))
 # --- FUNGSI BARU: Mengirim Alert ke Telegram ---
 def send_telegram_alert(message):
     """Mengirim pesan ke bot Telegram Anda."""
-    url = f"https://api.telegram.org/bot{8491616215:AAH832dUOEd3XjCKhGLRbyoAVCP7VFozt84}/sendMessage"
+    url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
     payload = {
-        'chat_id': GemaScreenerbot,
+        'chat_id': TELEGRAM_CHAT_ID,
         'text': message,
         'parse_mode': 'HTML'
     }
@@ -95,4 +95,5 @@ def screen_stocks():
 
 # --- Jalankan fungsi utama ---
 if __name__ == '__main__':
+
     screen_stocks()
