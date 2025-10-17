@@ -1,5 +1,6 @@
 # Nama File: screener_alert.py
 
+import os
 import pandas as pd
 import yfinance as yf
 import pandas_ta as ta
@@ -97,4 +98,5 @@ def screen_stocks():
 if __name__ == '__main__':
 
     screen_stocks()
+
 
