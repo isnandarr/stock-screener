@@ -6,8 +6,8 @@ import pandas_ta as ta
 import requests # Library baru untuk mengirim alert
 
 # --- MASUKKAN DATA ANDA DI SINI ---
-TELEGRAM_TOKEN = "GANTI_DENGAN_TOKEN_BOT_ANDA"
-TELEGRAM_CHAT_ID = "GANTI_DENGAN_CHAT_ID_ANDA"
+TELEGRAM_TOKEN = os.environ.get("TELEGRAM_TOKEN")
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 # -----------------------------------
 
 # --- PENGATURAN SCREENER ---
@@ -97,3 +97,4 @@ def screen_stocks():
 if __name__ == '__main__':
 
     screen_stocks()
+
